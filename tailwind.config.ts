@@ -15,6 +15,9 @@ const config: Config = {
       },
       backgroundColor: {
         'body': '#F9F7F7',
+        'blue-1': '#DBE2EF',
+        'blue-2': '#3F72AF',
+        'blue-3': '#112D4E'
       },
     },
   },

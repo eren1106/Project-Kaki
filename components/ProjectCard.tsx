@@ -4,7 +4,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 
 const ProjectCard = () => {
   return (
-    <div className='p-4 shadow-md rounded-lg cursor-pointer'>
+    <div className='p-6 shadow-md rounded-lg cursor-pointer bg-blue-1'>
       <div className='flex gap-2'>
         <Avatar
           name='project image'
@@ -15,13 +15,13 @@ const ProjectCard = () => {
           <p className='font-bold text-xl'>Title</p>
           <p>tag, tag</p>
         </div>
-        <div className='flex ml-auto gap-1'>
+        <div className='flex ml-auto gap-1 items-center'>
           <Icon as={BsFillPersonFill} />
           <p className="text-sm">2/9</p>
         </div>
       </div>
       {/* Divider */}
-      <div className="border-t border-gray-200 my-4"></div>
+      <div className="border-t border-gray-400 my-4"></div>
       <p>
         Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>

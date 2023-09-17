@@ -5,8 +5,14 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='container p-10 min-h-screen bg-body'>
-      <div className='mx-auto grid grid-cols-3 gap-4'>
+    <div className='container'>
+      <div className='grid grid-cols-4 gap-5'>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />

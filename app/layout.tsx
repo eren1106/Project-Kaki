@@ -2,6 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Providers } from './providers'
+import Topbar from '@/components/Topbar'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className='min-h-screen bg-body relative flex flex-col'>
         <Providers>
-          {children}
+          <Topbar />
+          <div className='p-5 flex-1'>
+            {children}
+          </div>
+          <Footer />
         </Providers>
       </body>
     </html>
