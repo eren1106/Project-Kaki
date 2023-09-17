@@ -1,5 +1,8 @@
-import { Avatar } from '@chakra-ui/react'
+'use client'
+
+import { Avatar, Icon } from '@chakra-ui/react'
 import React from 'react'
+import { IoNotifications } from 'react-icons/io5'
 
 const Topbar = () => {
   return (
@@ -7,7 +10,8 @@ const Topbar = () => {
       <h1 className='text-2xl font-black text-white cursor-pointer'>
         Project Kaki
       </h1>
-      <div className="ml-auto">
+      <div className="ml-auto flex gap-4 items-center cursor-pointer">
+        <Icon as={IoNotifications} color='white' boxSize={5} />
         <Avatar
           name='project image'
           size='sm'
