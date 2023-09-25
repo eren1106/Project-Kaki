@@ -22,8 +22,10 @@ export default function RootLayout({
       <body className='min-h-screen bg-body relative flex flex-col'>
         <Providers>
           <Topbar />
-          <div className='p-6 flex-1'>
-            {children}
+          <div className='flex-1 flex flex-col items-center'>
+            <div className='container p-6'>
+              {children}
+            </div>
           </div>
           <Footer />
         </Providers>
