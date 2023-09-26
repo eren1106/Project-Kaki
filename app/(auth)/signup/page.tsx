@@ -1,5 +1,8 @@
-import { Button, Divider, Image, Input, Stack } from '@chakra-ui/react'
-import React from 'react'
+'use client'
+
+import React from 'react';
+import { Button, Circle, Divider, HStack, Icon, Image, Input, Stack } from '@chakra-ui/react';
+import { FaGoogle, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 
 const SignUp = () => {
   return (
@@ -24,7 +27,22 @@ const SignUp = () => {
           <Button className='bg-blue-3 hover:bg-blue-2 text-white' size='lg'>
             Sign Up
           </Button>
-          <Divider orientation='horizontal' borderColor='grey' />
+          <HStack spacing={3}>
+            <Divider orientation='horizontal' borderColor='grey' />
+            <p>OR</p>
+            <Divider orientation='horizontal' borderColor='grey' />
+          </HStack>
+          <HStack spacing={5} justifyContent="center">
+            <Circle size='40px' className='bg-blue-3' color='white'>
+              <Icon as={FaGoogle} />
+            </Circle>
+            <Circle size='40px' className='bg-blue-3' color='white'>
+              <Icon as={FaGithub} />
+            </Circle>
+            <Circle size='40px' className='bg-blue-3' color='white'>
+              <Icon as={FaLinkedinIn} />
+            </Circle>
+          </HStack>
         </Stack>
       </div>
     </div>

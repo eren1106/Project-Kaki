@@ -10,7 +10,7 @@ const Topbar = () => {
     <div className='flex p-3 bg-blue-3'>
       <Link href='/'>
         <h1 className='text-2xl font-black text-white cursor-pointer'>
-          Project Kaki
+          ProjectKaki
         </h1>
       </Link>
       <div className="ml-auto flex gap-4 items-center cursor-pointer">
