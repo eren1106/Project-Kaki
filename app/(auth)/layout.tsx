@@ -19,13 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='min-h-screen bg-body relative flex flex-col'>
+      <body>
         <Providers>
-          <div className='flex-1 flex flex-col items-center'>
-            <div className='container p-6'>
-              {children}
-            </div>
-          </div>
+            {children}
         </Providers>
       </body>
     </html>
