@@ -25,8 +25,8 @@ const Login = () => {
         <div className='sm:w-1/2 w-100 md:p-6 p-4 bg-blue-1 flex flex-col justify-center'>
           <Stack spacing={3}>
             <h1 className='font-bold text-2xl self-center'>Log In</h1>
-            <Input placeholder='Email' size='md' className='bg-body' />
-            <Input placeholder='Password' size='md' className='bg-body' />
+            <Input placeholder='Email' className='bg-body' />
+            <Input placeholder='Password' className='bg-body' />
             <Button className='bg-blue-3 hover:bg-blue-2 text-white' size='lg'>
               Log In
             </Button>
@@ -48,7 +48,7 @@ const Login = () => {
             </HStack>
             <Text textAlign="center">
               Don't have an account yet?{' '}
-              <Link as={NextLink} href='/Login' className='text-blue-2'>
+              <Link as={NextLink} href='/signup' className='text-blue-2'>
                 Create one here!
               </Link>
             </Text>

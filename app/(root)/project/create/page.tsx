@@ -1,8 +1,11 @@
+import ProjectForm from '@/components/ProjectForm'
 import React from 'react'
 
 const CreateProject = () => {
   return (
-    <div>CreateProject</div>
+    <div className='flex flex-col items-center'>
+      <ProjectForm />
+    </div>
   )
 }
 
