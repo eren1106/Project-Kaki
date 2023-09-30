@@ -4,7 +4,7 @@ import React from 'react'
 const CreateProject = () => {
   return (
     <div className='flex flex-col items-center'>
-      <ProjectForm />
+      <ProjectForm title="Create Project" isEdit={false} />
     </div>
   )
 }

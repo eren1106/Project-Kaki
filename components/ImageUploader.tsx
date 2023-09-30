@@ -58,6 +58,7 @@ const ImageUploader: React.FC = () => {
         _hover={{
           opacity: 0.8
         }}
+        className="transition ease-in"
         onClick={handleImageClick}
       >
         <Text

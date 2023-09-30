@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import 'react-quill/dist/quill.snow.css';
 import ImageUploader from './ImageUploader';
 import { AddIcon, DeleteIcon } from '@chakra-ui/icons';
+import TagInput from './TagInput';
 
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
@@ -29,14 +30,19 @@ const quillModules = {
   },
 }
 
-const ProjectForm = () => {
+interface Props {
+  title: string;
+  isEdit: boolean;
+}
+
+const ProjectForm = ({ title, isEdit }: Props) => {
   const [quillValue, setQuillValue] = useState('');
   const [needApprove, setNeedApprove] = useState(false);
 
   return (
     <div className="w-full max-w-3xl">
       <Stack spacing={3}>
-        <h1 className='font-bold text-2xl'>Create Project</h1>
+        <h1 className='font-bold text-2xl'>{title}</h1>
         <FormControl id="maxPersonNum">
           <FormLabel>Project Image</FormLabel>
           <ImageUploader />
@@ -55,6 +61,10 @@ const ProjectForm = () => {
             className='bg-white border-gray-300'
             resize="none"
           />
+        </FormControl>
+        <FormControl id="tags">
+          <FormLabel>Tags</FormLabel>
+          <TagInput />
         </FormControl>
         <FormControl id="maxPersonNum">
           <FormLabel>Number of members required</FormLabel>
@@ -122,6 +132,11 @@ const ProjectForm = () => {
           />
           {/* <div dangerouslySetInnerHTML={{__html: value}}></div> */}
         </FormControl>
+        <Button
+          className='bg-blue-3 hover:bg-blue-2 text-white'
+        >
+          {isEdit ? "Save" : "Create"}
+        </Button>
       </Stack>
     </div>
   )
