@@ -23,7 +23,7 @@ export default function RootLayout({
         <Providers>
           <Topbar />
           <div className='flex-1 flex flex-col items-center'>
-            <div className='container p-6'>
+            <div className='container p-6 flex flex-col items-center'>
               {children}
             </div>
           </div>

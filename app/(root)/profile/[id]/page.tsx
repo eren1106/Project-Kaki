@@ -8,7 +8,7 @@ import { FaLocationDot, FaGithub, FaLinkedin } from 'react-icons/fa6'
 
 const Profile = () => {
   return (
-    <div className='container'>
+    <div className='max-w-6xl flex flex-col gap-5'>
       <div className='flex bg-blue-1 rounded-lg p-8 gap-5'>
         <Avatar
           size='2xl'
@@ -53,6 +53,20 @@ const Profile = () => {
               <Icon as={FaLinkedin} boxSize={6} color="#0a66c2" />
             </Link >
           </HStack>
+        </Stack>
+      </div>
+      <div className='flex flex-col bg-blue-1 rounded-lg p-6 gap-5'>
+        <Stack spacing={0}>
+          <h1 className='font-bold text-lg'>About</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magni maiores iure eos corrupti minima laboriosam? Molestias nesciunt illum numquam sapiente provident, laborum eveniet autem qui! Incidunt, similique! Doloribus, illum itaque consequuntur distinctio velit culpa quas optio architecto! Possimus laudantium rem in ducimus facilis dolorem laboriosam sunt neque doloremque nam.</p>
+        </Stack>
+        <Stack spacing={0}>
+          <h1 className='font-bold text-lg'>Past Projects</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magni maiores iure eos corrupti minima laboriosam? Molestias nesciunt illum numquam sapiente provident, laborum eveniet autem qui! Incidunt, similique! Doloribus, illum itaque consequuntur distinctio velit culpa quas optio architecto! Possimus laudantium rem in ducimus facilis dolorem laboriosam sunt neque doloremque nam.</p>
+        </Stack>
+        <Stack spacing={0}>
+          <h1 className='font-bold text-lg'>Current Projects</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magni maiores iure eos corrupti minima laboriosam? Molestias nesciunt illum numquam sapiente provident, laborum eveniet autem qui! Incidunt, similique! Doloribus, illum itaque consequuntur distinctio velit culpa quas optio architecto! Possimus laudantium rem in ducimus facilis dolorem laboriosam sunt neque doloremque nam.</p>
         </Stack>
       </div>
     </div>
