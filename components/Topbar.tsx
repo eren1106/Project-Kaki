@@ -16,7 +16,6 @@ const Topbar = () => {
       <div className="ml-auto flex gap-4 items-center cursor-pointer">
         <Icon as={IoNotifications} color='white' boxSize={5} />
         <Avatar
-          name='profile image'
           size='sm'
           src="https://mfiles.alphacoders.com/988/988122.jpg"
           className='cursor-pointer'
