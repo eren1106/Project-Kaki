@@ -1,12 +1,16 @@
 'use client'
 
 import { EmailIcon, LinkIcon, PhoneIcon } from '@chakra-ui/icons'
-import { Avatar, Button, Divider, HStack, Icon, Link, Stack } from '@chakra-ui/react'
+import { Avatar, Button, Divider, HStack, Icon, Link, Stack, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import { IoIosSend } from 'react-icons/io'
+import { FaEdit } from 'react-icons/fa'
 import { FaLocationDot, FaGithub, FaLinkedin } from 'react-icons/fa6'
+import CustomModal from '@/components/CustomModal'
 
 const Profile = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
     <div className='max-w-6xl flex flex-col gap-5'>
       <div className='flex bg-blue-1 rounded-lg p-8 gap-5'>
@@ -18,11 +22,18 @@ const Profile = () => {
         <Stack spacing={3} className='w-6/12'>
           <h1 className='font-bold text-2xl'>Eren Yeager</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quae magnam eos incidunt vero perferendis possimus delectus magni! Neque, veritatis!</p>
-          <Button
+          {/* <Button
             leftIcon={<IoIosSend />}
             className='bg-blue-3 hover:bg-blue-2 text-white max-w-min'
           >
             Invite
+          </Button> */}
+          <Button
+            leftIcon={<FaEdit />}
+            className='bg-blue-3 hover:bg-blue-2 text-white max-w-min'
+            onClick={onOpen}
+          >
+            Edit
           </Button>
         </Stack>
         <div className='h-100'>
@@ -69,6 +80,14 @@ const Profile = () => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magni maiores iure eos corrupti minima laboriosam? Molestias nesciunt illum numquam sapiente provident, laborum eveniet autem qui! Incidunt, similique! Doloribus, illum itaque consequuntur distinctio velit culpa quas optio architecto! Possimus laudantium rem in ducimus facilis dolorem laboriosam sunt neque doloremque nam.</p>
         </Stack>
       </div>
+      <CustomModal
+        title="Edit Profile"
+        isOpen={isOpen}
+        onAction={()=>{console.log("OI")}}
+        onClose={onClose}
+      >
+        Profile Form
+      </CustomModal>
     </div>
   )
 }
