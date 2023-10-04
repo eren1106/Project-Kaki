@@ -1,12 +1,13 @@
 'use client'
 
 import { EmailIcon, LinkIcon, PhoneIcon } from '@chakra-ui/icons'
-import { Avatar, Button, Divider, HStack, Icon, Link, Stack, useDisclosure } from '@chakra-ui/react'
+import { Avatar, Button, Divider, FormControl, FormLabel, HStack, Icon, Input, Link, Stack, Textarea, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import { IoIosSend } from 'react-icons/io'
 import { FaEdit } from 'react-icons/fa'
 import { FaLocationDot, FaGithub, FaLinkedin } from 'react-icons/fa6'
 import CustomModal from '@/components/CustomModal'
+import ImageUploader from '@/components/ImageUploader'
 
 const Profile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -83,12 +84,98 @@ const Profile = () => {
       <CustomModal
         title="Edit Profile"
         isOpen={isOpen}
-        onAction={()=>{console.log("OI")}}
+        onAction={() => { console.log("OI") }}
         onClose={onClose}
       >
-        Profile Form
+        <ProfileForm />
       </CustomModal>
     </div>
+  )
+}
+
+const ProfileForm = () => {
+  return (
+    <Stack spacing={3}>
+      <FormControl id="maxPersonNum">
+        <FormLabel>Profile Picture</FormLabel>
+        <ImageUploader />
+      </FormControl>
+      <HStack>
+        <FormControl id="firstName">
+          <FormLabel>First Name</FormLabel>
+          <Input
+            placeholder='First Name'
+            className='bg-white border-gray-300'
+          />
+        </FormControl>
+        <FormControl id="lastName">
+          <FormLabel>Last Name</FormLabel>
+          <Input
+            placeholder='Last Name'
+            className='bg-white border-gray-300'
+          />
+        </FormControl>
+      </HStack>
+      <FormControl id="bio">
+        <FormLabel>Bio</FormLabel>
+        <Textarea
+          placeholder='Bio'
+          className='bg-white border-gray-300'
+          resize="none"
+        />
+      </FormControl>
+      <FormControl id="about">
+        <FormLabel>About</FormLabel>
+        <Textarea
+          placeholder='About'
+          className='bg-white border-gray-300'
+          resize="none"
+        />
+      </FormControl>
+      <FormControl id="email">
+        <FormLabel>Email</FormLabel>
+        <Input
+          placeholder='Email'
+          className='bg-white border-gray-300'
+          type='email'
+        />
+      </FormControl>
+      <FormControl id="phone">
+        <FormLabel>Phone</FormLabel>
+        <Input
+          placeholder='Phone'
+          className='bg-white border-gray-300'
+        />
+      </FormControl>
+      <FormControl id="location">
+        <FormLabel>Location</FormLabel>
+        <Input
+          placeholder='Location'
+          className='bg-white border-gray-300'
+        />
+      </FormControl>
+      <FormControl id="portfolio">
+        <FormLabel>Portfolio (optional)</FormLabel>
+        <Input
+          placeholder='Portfolio'
+          className='bg-white border-gray-300'
+        />
+      </FormControl>
+      <FormControl id="github">
+        <FormLabel>Github (optional)</FormLabel>
+        <Input
+          placeholder='Github'
+          className='bg-white border-gray-300'
+        />
+      </FormControl>
+      <FormControl id="linkedin">
+        <FormLabel>Linkedin (optional)</FormLabel>
+        <Input
+          placeholder='Linkedin'
+          className='bg-white border-gray-300'
+        />
+      </FormControl>
+    </Stack>
   )
 }
 

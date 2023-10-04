@@ -21,10 +21,10 @@ const CustomModal = ({
   children
 }: Props) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose} size={size}>
+    <Modal isOpen={isOpen} onClose={onClose} size={size} scrollBehavior='inside'>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>{title}</ModalHeader>
+        <ModalHeader fontWeight='bold'>{title}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           {children}
